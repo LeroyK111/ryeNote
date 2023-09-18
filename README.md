@@ -1,2 +1,1 @@
-# ryeNote
-rye usage notes.
+# 
