@@ -35,7 +35,7 @@ managed = true
 # name = "default"
 # url = "http://pypi.org/simple/"
 
-# 包本身的脚本，由rye驱动，类似npm run
+# 包本身的脚本，由rye run驱动，类似npm run
 # [tool.rye.scripts]
 # 三者是等价的
 # devserver = "flask run --app ./hello.py --debug"
@@ -67,3 +67,7 @@ allow-direct-references = true
 # 轮子依赖
 # [tool.hatch.build.targets.sdist]
 # include = ["src/my_package", "tests"]
+
+
+# 依赖项
+# [tool.rye.dev-dependencies]

@@ -157,31 +157,38 @@ $ rye uninstall pycowsay
 
 某些工具不会声明其所有依赖项，因为它们可能是可选的。在某些情况下，可以通过将额外功能传递给安装程序来声明这些：
 
-`rye install black --features colorama`
+```shell
+rye install black --features colorama
+```
+
 
 如果根本没有指定依赖项，则可以通过`--extra-requirement`. 如果工具使用`pkg_resources`（的一部分 `setuptools`）但忘记声明该依赖项，有时这尤其必要：
 
-`rye install gradio --extra-requirement setuptools`
+```shell
+rye install gradio --extra-requirement setuptools
+```
+
 
 ##### 展示工具
 
 如果您想查看安装了哪些工具，可以使用`rye tools list`：
 
-`rye tools list`
-
-`black   black   blackd ruff   ruff`
+```shell
+rye tools list
+```
 
 要查看这些工具提供的脚本，还可以通过`--include-scripts`
 
-`rye tools list --include-scripts`
-
+```shell
+rye tools list --include-scripts
+```
 ##### 卸载工具
 
 要再次卸载工具，请使用`rye tools uninstall`（别名为`rye uninstall`）：
 
-`rye uninstall black`
-
-
+```
+rye uninstall black
+```
 #### 执行脚本
 ```shell
 rye run key
@@ -262,6 +269,7 @@ windows环境下：
 rye config --set proxy.http=http://127.0.0.1:4000 
 rye config --set-bool behavior.rye-force-managed=true 
 rye config --get default.requires-python
+rye config --set-bool behavior.global-python=true
 ```
 
 
@@ -367,16 +375,22 @@ rust和python相互粘合。
 
 ### 基本依赖
 要添加常规依赖项，只需`rye add`使用 Python 包的名称进行调用：
+```shell
+rye add Flask
+```
 
-`rye add Flask`
 
 如果您还想定义版本，请使用[PEP 508](https://peps.python.org/pep-0508/) 要求：
-
-`rye add "Flask>=2.0"`
+```shell
+rye add "Flask>=2.0"
+```
 
 对于额外/功能依赖项，您可以使用 PEP 508 语法或使用`--features`：
 
-`rye add "Flask[dotenv]" rye add Flask --features=dotenv`
+```shell
+rye add "Flask[dotenv]" rye add Flask --features=dotenv
+```
+
 
 这些依赖项存储在[`project.dependencies`](https://rye-up.com/guide/pyproject/#projectdependencies).
 
@@ -384,28 +398,32 @@ rust和python相互粘合。
 
 默认情况下`add`不会考虑预发布。这意味着如果您添加版本号具有`.dev`或相似的依赖项，您将找不到匹配项。要考虑它们，请将它们添加为`--pre`：
 
-`rye add "Flask==2.0.0rc2" --pre`
-
+```shell
+rye add "Flask==2.0.0rc2" --pre
+```
 ### 开发依赖
 对于仅应在开发过程中安装的依赖项--dev
-
-
+```shell
 rye add --dev black
+```
+
+
 这些依赖关系存储在非标准 tool.rye.dev-dependencies密钥中。
 
 要运行以这种方式添加的工具而不启用 virtualenv，请使用rye run：
 
-
+```shell
 rye run black
+```
+
 
 ### Git/本地依赖项
 要添加本地或 git 依赖项，您可以传递其他参数，例如--path 或--git：
 
-
+```shell
 rye add Flask --git=https://github.com/pallets/flask
 rye add My-Utility --path ./my-utility
-
-
+```
 请注意，添加此类依赖项时，还必须提供包的名称。此外，对于 git 依赖项，还支持各种额外参数，例如--tag,--rev或。--branch
 
 当使用本地依赖项时，强烈建议配置 工作区。
