@@ -56,8 +56,6 @@ cd my-project
 rye pin 3.10
 ```
 
-
-
 ### 同步虚拟环境
 这里会自动下载最新的python解释器， 作为rye默认的python启动器。
 这里就是带宽问题了，反正比较慢。
@@ -65,6 +63,9 @@ rye pin 3.10
 rye sync
 ```
 ![](readme.assets/Pasted%20image%2020230919133249.png)
+virtualenv 是python自带的虚拟环境。
+![](readme.assets/Pasted%20image%2020230919213739.png)
+
 #### ☆坑
 如果你写的项目不是基于最新python解释器，而是其他版本的cpython那么你还需要
 等更长时间去下载其他的cpython😂
