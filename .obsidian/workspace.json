@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "readme.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "readme.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "readme.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "readme.md"
+                "file": "README.md"
               }
             }
           }
@@ -147,11 +147,27 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "4f3335554ca2ccf8",
+  "active": "730f1bcc7578b9a5",
   "lastOpenFiles": [
-    "LICENSE",
-    "ryeNote/README.md",
-    "ryeNote/LICENSE",
-    "ryeNote"
+    "my-project/src/demo",
+    "readme.assets/Pasted image 20230919170957.png",
+    "readme.assets/Pasted image 20230919163653.png",
+    "my-project/config/config.toml",
+    "my-project/config",
+    "my-project/src/my_project/helloRye.py",
+    "readme.assets/Pasted image 20230919155645.png",
+    "my-project/requirements-dev.lock",
+    "my-project/requirements.lock",
+    "readme.assets/Pasted image 20230919133249.png",
+    "my-project/src/my_project/__init__.py",
+    "my-project/src/my_project",
+    "my-project/src",
+    "my-project/pyproject.toml",
+    "my-project/README.md",
+    "my-project",
+    "readme.assets/Pasted image 20230919093019.png",
+    "readme.assets/Pasted image 20230919092816.png",
+    "README.md",
+    "ryeNote/README.md"
   ]
 }

@@ -1,0 +1,46 @@
+[default]
+#这是写入new pyproject.toml的默认值项目文件。requires-python的关键
+# requires-python = ">= 3.8"
+
+# 这是使用的默认工具链
+# toolchain = "cpython@3.8.17"
+
+# 这是使用的默认构建系统
+# build-system = "hatchling"
+
+# 这是遵从的开源协议
+# license = "MIT"
+
+# 这会设置默认的作者(覆盖git的默认值)。
+# "Name <email>"
+
+# author = "{ name = 'LeroyK', email = '785632486@qq.com' }"
+
+# 依赖选项.  The options are
+# '>=', '~=', and '=='.  The default currently is '>='.  This affects the behavior
+# of `rye add`.
+
+# dependency-operator = ">="
+
+[proxy]
+# 用于HTTP的代理(由http_proxy环境变量覆盖)
+# http = "http://127.0.0.1:4000"
+# the proxy to use for HTTPS (overridden by the https_proxy environment variable)
+# https = "http://127.0.0.1:4000"
+
+[behavior]
+# 当设置为true时，' managed '标志总是被假定为true。
+# force-rye-managed = false
+
+#当设置为“true”时启用全局垫片。这意味着安装' python ' shim将解析为一个Rye管理的工具链，甚至在外部虚拟环境。
+# global-python = false
+
+# 具有可选源的表数组。格式与pyproject.toml相同
+# [[sources]]
+# name = "default"
+# url = "http://pypi.org/simple/"
+# type = "index"  # 这是由 PyPI 或devpi等工具提供的PEP 503类型索引。它对应于 pip 中的参数或
+# type = "find-links" # 这是一个可以有多种类型的源，并且必须指向链接到包的文件路径或托管 HTML 页面。
+# username = "username" # 支持验证
+# password = "super secret"
+# url = "https://${INDEX_USERNAME}:${INDEX_PASSWORD}@company.internal/simple/" # 支持环境变量
